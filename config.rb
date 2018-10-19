@@ -47,3 +47,7 @@ page '/*.txt', layout: false
 
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true
+
+require 'rack/rewrite'
+use ::Rack::Rewrite do
+end
