@@ -50,4 +50,5 @@ set :markdown, fenced_code_blocks: true
 
 require 'rack/rewrite'
 use ::Rack::Rewrite do
+  rewrite %r{(.*\.html)\.(?:markdown|md)}, '$1'
 end
